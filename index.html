@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#333">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio</title>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <header class="bg-gray-900 text-white py-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Portfolio</h1>
+            <nav class="space-x-4">
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#projects" class="hover:text-gray-300">Projects</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-bold mb-4">About Me</h2>
+            <p class="text-gray-600">Hello! I am a web developer with a passion for creating beautiful and functional web applications.</p>
+        </section>
+
+        <section id="projects" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-bold mb-4">Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold">Project 1</h3>
+                    <p class="text-gray-600">A description of my first project.</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold">Project 2</h3>
+                    <p class="text-gray-600">A description of my second project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-4">Contact</h2>
+            <p class="text-gray-600">Email: <a href="mailto:example@example.com" class="text-blue-500 hover:underline">example@example.com</a></p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-4 mt-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 My Portfolio</p>
+        </div>
+    </footer>
+
+    <script>
+        // Register the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log('Service Worker Registered'))
+                .catch(err => console.error('Service Worker Registration Failed:', err));
+        }
+    </script>
+</body>
+</html>
